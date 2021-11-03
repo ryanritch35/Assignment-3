@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/first">
+
+    <fragment
+        android:id="@+id/first"
+        android:name="com.example.myapplication.First"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_first_to_weather"
+            app:destination="@id/weather" />
+    </fragment>
+    <fragment
+        android:id="@+id/weather"
+        android:name="com.example.myapplication.Weather"
+        android:label="fragment_weather"
+        tools:layout="@layout/fragment_weather" >
+        <action
+            android:id="@+id/action_weather_to_investment"
+            app:destination="@id/investment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resume"
+        android:name="com.example.myapplication.Resume"
+        android:label="fragment_resume"
+        tools:layout="@layout/fragment_resume" >
+        <action
+            android:id="@+id/action_resume_to_first"
+            app:destination="@id/first" />
+    </fragment>
+    <fragment
+        android:id="@+id/investment"
+        android:name="com.example.myapplication.Investment"
+        android:label="fragment_investment"
+        tools:layout="@layout/fragment_investment" >
+        <action
+            android:id="@+id/action_investment_to_resume"
+            app:destination="@id/resume" />
+    </fragment>
+</navigation>
